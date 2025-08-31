@@ -1,0 +1,23 @@
+# Node.js
+node_modules/
+.env
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Vite/React
+dist/
+build/
+coverage/
+.vite/
+
+# Editor/IDE specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Other common ignores
+*.log
+*.tmp

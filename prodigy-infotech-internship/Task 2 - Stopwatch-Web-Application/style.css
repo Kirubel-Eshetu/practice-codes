@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    background-image: url('time-glass.jpg');
+    background-size: fixed;
+    overflow: hidden;
+}
+
+.stopwatch {
+    background-color: #fff;
+    padding: 30px;
+    border: #000000 5px solid;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.display {
+    font-size: 3.5em;
+    margin-bottom: 25px;
+}
+
+.controls button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.13em;
+}
+
+#startStop {
+    background-color: #00a105;
+    color: white;
+}
+
+#startStop.paused {
+    background-color: #0000ff;
+}
+
+#reset {
+    background-color: #ff0000;
+    color: #ffffff;
+    border: 1px solid #ddd;
+}
+
+#lap {
+    background-color: #ffd900;
+    color: rgb(0, 0, 0);
+}
+
+#laps {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#laps li {
+    padding: 8px 12px;
+    border-bottom: 1px solid #eee;
+}
+
+#laps li:last-child {
+    border-bottom: none;
+}
