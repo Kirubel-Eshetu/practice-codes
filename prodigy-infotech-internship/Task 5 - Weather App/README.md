@@ -1,8 +1,8 @@
 # T5-weather-app
-Final task from my internship program as a web developer.
+5️⃣ Final task from my internship program as a Web Developer.
 
-The weather app is a webiste developed with HTML, CSS and JS. 
-- You can insert the city of your choice to check the weather condition or use your own location to check for the weather condition of your area.
+☁️ The weather app is a webiste developed with HTML, CSS and JS. 
+🏙️ You can insert the city of your choice to check the weather condition or use your own location to check for the weather condition of your area. 🌡️
   
 The weather app displays the following informations:-
 
