@@ -18,4 +18,4 @@ The weather app displays the following informations:-
 
 You can take a look at the picture of the weather application down below :)
 
-<img src = "https://github.com/Kirubel-Eshetu/media_repo/blob/main/Weather_app.png" alt = "Weather App">
+<img src = "https://github.com/Kirubel-Eshetu/media-repo/blob/main/weather-app.png" alt = "Weather App">
