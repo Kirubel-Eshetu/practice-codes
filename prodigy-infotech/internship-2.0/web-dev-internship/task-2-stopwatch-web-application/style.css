@@ -9,7 +9,6 @@ body {
 
 .projTitle {
     text-align: center;
-    margin-bottom: 2rem;
 }
 
 .stopwatchContainer {
@@ -21,11 +20,52 @@ body {
   margin: auto;
   height: fit-content;
   border: 2px solid blue;
-  padding: 1.5rem;
+  padding: 2rem;
+}
+
+.operations {
+    margin-top: 0.5rem;
+}
+
+.startBtn, .pauseBtn, .resetBtn {
+    color: white;
+    border-radius: 40%;
+    padding: 0.25rem;
+}
+
+.startBtn {
+    background-color: green;
+}
+
+.pauseBtn {
+    background-color: blue;
+}
+
+.resetBtn {
+    background-color: red;
+}
+
+.lapContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.lapBtn {
+    background-color: pink;
+    border-radius: 40%;
+    padding: 0.25rem;
+}
+
+footer {
+    background-color: #252525;
+    color: white;
+    width: 100%;
+    text-align: center;
 }
 
 @media (min-width: 768px) {
     .stopwatchContainer {
-        
+        padding: 3.5rem;
     }
 }
