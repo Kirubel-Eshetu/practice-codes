@@ -9,3 +9,7 @@ document.querySelector(".pauseBtn").onclick = function() {
 document.querySelector(".resetBtn").onclick = function() {
     console.log("Reset button pressed!")
 };
+
+document.querySelector(".lapBtn").onclick = function (){
+    console.log("Lap button pressed!");
+};
