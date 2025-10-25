@@ -6,3 +6,6 @@ document.querySelector(".pauseBtn").onclick = function() {
     console.log("Pause button pressed!");
 };
 
+document.querySelector(".resetBtn").onclick = function() {
+    console.log("Reset button pressed!")
+};
