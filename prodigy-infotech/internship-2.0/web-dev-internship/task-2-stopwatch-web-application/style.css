@@ -62,8 +62,8 @@ footer {
     color: white;
     width: 100%;
     text-align: center;
-    padding: 1rem;
-    margin-top: auto;
+    padding: 1.5rem;
+    box-sizing: border-box;
 }
 
 @media (min-width: 768px) {

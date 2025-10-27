@@ -1,15 +1,29 @@
+let startTime = 0;
+let elapsedTime = 0;
+let timerInterval = null;
+let isRunning = false;
+
+function formatTime(milliseconds){
+    const totalSeconds = Math.floor(milliseconds / 1000);
+    const seconds = totalSeconds % 60;
+    const minutes = Math.floor(totalSeconds / 60);
+    const hours = Math.floor(minutes / 60);
+    return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+}
+
+
 document.querySelector(".startBtn").onclick = function() {
-    console.log("Start button pressed!");
+    
 };
 
 document.querySelector(".pauseBtn").onclick = function() {
-    console.log("Pause button pressed!");
+    
 };
 
 document.querySelector(".resetBtn").onclick = function() {
-    console.log("Reset button pressed!")
+    
 };
 
 document.querySelector(".lapBtn").onclick = function (){
-    console.log("Lap button pressed!");
+    
 };
