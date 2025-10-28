@@ -11,6 +11,11 @@ function formatTime(milliseconds){
     return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 }
 
+function updateDisplay() {
+    const currentTime = Date.now();
+    elapsedTime = currentTime - startTime;
+    document.querySelector('.minutes').textContent = formatTime(elapsedTime);
+}
 
 document.querySelector(".startBtn").onclick = function() {
     
