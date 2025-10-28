@@ -18,17 +18,30 @@ function updateDisplay() {
 }
 
 document.querySelector(".startBtn").onclick = function() {
-    
+    if(!isRunning) {
+        startTime = Date.now() - elapsedTime;
+        timerInterval = setInterval(updateDisplay, 100);
+        isRunning = true;
+    }
 };
 
 document.querySelector(".pauseBtn").onclick = function() {
-    
+    if(isRunning) {
+        clearInterval(timerInterval);
+        isRunning = false;
+    }
 };
 
-document.querySelector(".resetBtn").onclick = function() {
-    
+document.querySelector(".resetBtn").onClick = function() {
+    clearInterval(timerInterval);
+    isRunning = false;
+    elapsedTime = 0;
+    startTime = 0;
+    document.querySelector('.minute').textContent = '00:00';
 };
 
-document.querySelector(".lapBtn").onclick = function (){
-    
+document.querySelector(".lapBtn").onclick = function() {
+    if(isRunning) {
+        console.log('Lap time', formatTime(elapsedTime));
+    }
 };
