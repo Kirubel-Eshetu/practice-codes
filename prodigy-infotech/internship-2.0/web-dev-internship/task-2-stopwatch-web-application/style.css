@@ -47,14 +47,22 @@ body {
 
 .lapContainer {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-top: 1rem;
 }
 
 .lapBtn {
+    display: flex;
+    width: fit-content;
     background-color: pink;
     border-radius: 40%;
     padding: 0.25rem;
+}
+
+.lapDisplay {
+    display: none;
+    margin-top: 1rem;
 }
 
 footer {

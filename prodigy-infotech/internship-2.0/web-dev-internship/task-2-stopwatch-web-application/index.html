@@ -1,3 +1,5 @@
+<!-- Stopwatch web Application here we go -->
+ 
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,7 +14,7 @@
 
     <!-- Main Container -->
     <div class="stopwatchContainer">
-      <div class="minutes">00:00</div>
+      <div class="minutes">00:00.00</div>
       <div class="buttons">
         <div class="operations">
           <button class="startBtn">start</button>
@@ -21,13 +23,16 @@
         </div>
         <div class="lapContainer">
           <button class="lapBtn">lap</button>
+          <div class="lapDisplay">
+            <!-- Laps will be displayed here with JS -->
+          </div>
         </div>
       </div>
     </div>
 
     <footer>
       Made from scratch by Kirubel. <br />
-      2025
+      <div class="yearDisplay"></div>
     </footer>
 
     <script src="script.js"></script>
