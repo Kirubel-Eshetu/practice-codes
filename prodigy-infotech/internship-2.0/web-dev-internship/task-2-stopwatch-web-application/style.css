@@ -5,13 +5,13 @@ body {
     align-items: center;
     justify-content: flex-start;
     min-height: 100vh;
-    background-image: url('assets/time-glass.jpg');
+    background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url('assets/time-glass.jpg');
 }
 
 .projTitle {
     text-align: center;
     color: white;
-    font-size: 1.15rem;
+    font-size: 1.25rem;
 }
 
 .stopwatchContainer {
@@ -24,18 +24,26 @@ body {
   height: fit-content;
   border: 0.45rem solid #d89841;
   border-radius: 20%;
-  padding: 2rem;
+  padding: 4rem;
   background-color: white;
 }
 
-.operations {
-    margin-top: 0.5rem;
+.minutes {
+    font-size: 1.95rem;
 }
 
-.startBtn, .pauseBtn, .resetBtn {
+.operations {
+    margin-top: 0.8rem;
+}
+
+.startBtn, .pauseBtn, .resetBtn, .lapBtn {
     color: white;
-    border-radius: 40%;
-    padding: 0.25rem;
+    border: 2px solid black;
+    border-radius: 45%;
+    padding: 0.5rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    margin-left: 0.7rem;
 }
 
 .startBtn {
@@ -50,37 +58,37 @@ body {
     background-color: red;
 }
 
+.lapBtn {
+    background-color:rgb(153, 0, 255);
+}
+
 .lapContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 1rem;
-}
-
-.lapBtn {
-    display: flex;
-    width: fit-content;
-    background-color: pink;
-    border-radius: 40%;
-    padding: 0.25rem;
+    margin-top: 0.65rem;
+    
 }
 
 .lapDisplay {
     display: none;
-    margin-top: 1rem;
+    margin-top: 1.25rem;
+    font-size: 1.35rem;
 }
 
 footer {
-    background-color: #d89841;
+    background-color:rgb(126, 73, 0);
     color: white;
     width: 100%;
     text-align: center;
     padding: 1.5rem;
     box-sizing: border-box;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 @media (min-width: 768px) {
     .stopwatchContainer {
-        padding: 3.5rem;
+        
     }
 }

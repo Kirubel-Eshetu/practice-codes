@@ -84,6 +84,12 @@ document.querySelector(".lapBtn").onclick = function () {
   }
 };
 
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.operations button, .lapContainer button').forEach((btn) => {
+    btn.textContent = btn.textContent.toLowerCase().replace(/\b\w/g, (c) => c.toUpperCase());
+  });
+});
+
 function yearDisplay() {
   const date = new Date();
   const year = date.getFullYear();
