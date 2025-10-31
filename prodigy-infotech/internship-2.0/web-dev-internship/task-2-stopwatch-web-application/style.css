@@ -5,10 +5,13 @@ body {
     align-items: center;
     justify-content: flex-start;
     min-height: 100vh;
+    background-image: url('assets/time-glass.jpg');
 }
 
 .projTitle {
     text-align: center;
+    color: white;
+    font-size: 1.15rem;
 }
 
 .stopwatchContainer {
@@ -19,8 +22,10 @@ body {
   width: fit-content;
   margin: auto;
   height: fit-content;
-  border: 2px solid blue;
+  border: 0.45rem solid #d89841;
+  border-radius: 20%;
   padding: 2rem;
+  background-color: white;
 }
 
 .operations {
@@ -66,7 +71,7 @@ body {
 }
 
 footer {
-    background-color: #252525;
+    background-color: #d89841;
     color: white;
     width: 100%;
     text-align: center;
