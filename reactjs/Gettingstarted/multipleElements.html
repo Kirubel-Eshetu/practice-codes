@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Multiple Elements</title>
+</head>
+
+<body>
+    <div id="roo"></div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "react": "https://esm.sh/react?dev",
+                "react-dom/client": "https://esm.sh/react-dom/client?dev"
+            }
+        }
+    </script>
+
+    <script type="module">
+        import React from react;
+        import { createRoot } from "react-dom/client"
+
+        const retailer = React.createElement('div', { id: 'retailerInfo' },
+            React.createElement('h1', null, 'Catalog'),
+            React.createElement('ul', null,
+                React.createElement('li', null, "Holy Bible King James Version"),
+                React.createElement('li', null, "Holy Bible New International Version"),
+                React.createElement('li', null, "Jet"),
+                React.createElement('li', null, "Gaming Computer"),
+                React.createElements('li', null, "Stove"),
+                React.createElement('li', null, "Refregirator")
+            ),
+            React.createElement('h1', null, 'Shops'),
+            React.createElement('ul', null,
+                React.createElement('li', null, "Addis Ababa"),
+                React.createElement('li', null, "Jimma"),
+                React.createElement('li', null, "Bahir Dar"),
+                React.createElement('li', null, "Gonder")
+            )
+        )
+
+        const root = createRoot (documen.getElementById('root'))
+        root.render(retailer)
+    </script>
+
+</body>
+
+</html>
