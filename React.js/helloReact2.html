@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World Example 2 in React</title>
+</head>
+<body>
+
+    <div id="root"></div>
+
+    <!-- Defining Script Maps with aliases -->
+    <script type="importmap">
+        {
+            "imports": {
+                "react": "https://esm.sh/react",
+                "react-dom/client": "https://esm.sh/react-dom/client";
+            }
+        }
+    </script>
+
+    <script type="module">
+        import React from "react";
+        import { createRoot } from "react-dom/client";
+
+        const obj = React.createElement(
+            'h1',
+            {'id': 'Gods-word',
+            'bible-verse': "A message from the Bible"},
+            'For God so loved the world that he gave hes only begotten son that whoever believes in him shall not perish but have everlasting life. John 3:16 '
+        )
+
+        const root = createRoot(document.getElementById('root'));
+        root.render(obj);
+        
+    </script>
+    
+</body>
+</html>

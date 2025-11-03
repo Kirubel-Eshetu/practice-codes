@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World Example 1 in React</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <!-- Importing the CDN URL manually -->
+    <script type="module">
+        import React from "https://esm.sh/react";
+        import { createRoot } from "https://esm.sh/react-dom/client";
+
+        const obj = React.createElement (
+            'h1',
+            {'id': 'word-of-the-day', 'bible-verse': "A message from the Bible"},
+            'Hello Child of God! And we know that in all things God works for the good of those who love him, who have been called according to his purpose. Romans 8:28'
+        )
+
+        const root = createRoot(document.getElementById('root'));
+        root.render(obj);
+
+    </script>
+</body>
+</html>
