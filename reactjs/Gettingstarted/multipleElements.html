@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <div id="roo"></div>
+    <div id="root"></div>
 
     <script type="importmap">
         {
@@ -20,7 +20,7 @@
     </script>
 
     <script type="module">
-        import React from react;
+        import React from "react";
         import { createRoot } from "react-dom/client"
 
         const retailer = React.createElement('div', { id: 'retailerInfo' },
@@ -30,7 +30,7 @@
                 React.createElement('li', null, "Holy Bible New International Version"),
                 React.createElement('li', null, "Jet"),
                 React.createElement('li', null, "Gaming Computer"),
-                React.createElements('li', null, "Stove"),
+                React.createElement('li', null, "Stove"),
                 React.createElement('li', null, "Refregirator")
             ),
             React.createElement('h1', null, 'Shops'),
@@ -42,8 +42,8 @@
             )
         )
 
-        const root = createRoot (documen.getElementById('root'))
-        root.render(retailer)
+        const root = createRoot(document.getElementById('root'))
+        root.render(retailer);
     </script>
 
 </body>
