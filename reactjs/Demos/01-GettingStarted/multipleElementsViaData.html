@@ -1,3 +1,5 @@
+<!-- Using React via CDN imports in a plain .html file -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,8 +21,10 @@
     </script>
 
     <script type="module">
-        import React from "react"
-        import { createRoot } from "react-dom/client"
+        import React from "react";
+        import { createRoot } from "react-dom/client";
+
+        window.React = React;
 
         const products = [
             'Holy Bible King James Version',
