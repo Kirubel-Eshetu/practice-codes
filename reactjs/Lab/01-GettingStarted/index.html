@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Library</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+
+</head>
+<body>
+ 
+    <script>
+
+        class Book {
+            constructor(title, author) {
+                this.title = title;
+                this.author = author;
+            }
+
+            toString() {
+                return `$(this.title), by $(this.author)`;
+            }
+        }
+
+        class Film {
+            constructor(name, genre, blurb) {
+                this.name = name;
+                this.genre = genre;
+                this.blurb = blurb;
+            }
+
+            toString() {
+                return `${this.name} [${this.genre}], ${this.blurb}`;
+            }
+        }
+
+        const books = [
+            new Book(),
+            new Book(),
+            new Book(),
+        ]
+
+        const films = [
+            new Film(),
+            new Film(),
+            new Film()
+        ]
+        
+    </script>
+</body>
+</html>
