@@ -13,8 +13,21 @@
 
 </head>
 <body>
+
+    <div id="root"></div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "react": "https://esm.sh/react?dev",
+                "react-dom/client": "https://esm.sh/react-dom/client?dev"
+            }
+        }
+    </script>
  
-    <script>
+    <script type="module">
+        import React from "react";
+        import { createRoot } from "react-dom/client";
 
         class Book {
             constructor(title, author) {
@@ -23,9 +36,9 @@
             }
 
             toString() {
-                return `$(this.title), by $(this.author)`;
+                return `${this.title}, by ${this.author}`;
             }
-        }
+        };
 
         class Film {
             constructor(name, genre, blurb) {
@@ -37,20 +50,42 @@
             toString() {
                 return `${this.name} [${this.genre}], ${this.blurb}`;
             }
-        }
+        };
 
         const books = [
             new Book("Waiting and dating", "Myles Munroe"),
             new Book("ዙበይዳ", "አሌክስ አብርሃም"),
             new Book("ደራሲው", "በአሉ ግርማ"),
-        ]
+        ];
 
         const films = [
             new Film("ትዝታ", "AdveRom", "A person dead for another person is actually alive."),
             new Film("Who am I", "Technology", "A computer nerd's journey to become a vigilant hacker"),
-            new Film("The case for Christ", "Chirstian", )
-        ]
+            new Film("The case for Christ", "Chirstian", "An athesit journey of proving Christ's resurrection")
+        ];
 
+        const bookShelf = React.createElement(
+            'ul',
+            null,
+            books.map((b, i) => React.createElement("li", {key: i, title:`by ${b.author}`}, b.title))
+        );
+
+        const filmShelf = React.createElement(
+            'ul',
+            null,
+            films.map((f, i) => React.createElement("li", {key: i, title: `${f.genre}  |  ${f.blurb} `}, f.name))
+        )
+
+        const myLibrary = React.createElement('div', null, 
+            React.createElement('h1', null, 'My Library'),
+            React.createElement('h2', null, 'Books'),
+            bookShelf,
+            React.createElement('h2', null, 'Films'),
+            filmShelf
+        )
+
+        const root = createRoot(document.getElementById('root'));
+        root.render(myLibrary);
     </script>
 </body>
 </html>
