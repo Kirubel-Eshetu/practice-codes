@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example 2 of Creating Class-Based Components</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react",
+          "react-dom/client": "https://esm.sh/react-dom/client"
+        }
+      }
+    </script>
+
+    <script type="module">
+      import React from "react";
+      import { createRoot } from "react-dom/client";
+
+      class ProductsList extends React.Component {
+        render() {
+          return React.createElement(
+            "ul",
+            null,
+            React.createElement("li", null, "መጽሃፍ ቅዱስ"),
+            React.createElement("li", null, "Nissan Navara"),
+            React.createElement("li", null, "Tennis Racket"),
+            React.createElement("li", null, "Photo Album"),
+            React.createElement("li", null, "Leather Shoes"),
+            React.createElement("li", null, "Guitar"),
+            React.createElement("li", null, "Bicycle")
+          );
+        }
+      }
+
+      class ShopsList extends React.Component {
+        render() {
+          return React.createElement(
+            "ul",
+            null,
+            React.createElement("li", null, "Piasa"),
+            React.createElement("li", null, "Japan"),
+            React.createElement("li", null, "Bishoftu"),
+            React.createElement("li", null, "Adama"),
+            React.createElement("li", null, "DebreBirhan"),
+            React.createElement("li", null, "Weldiya"),
+            React.createElement("li", null, "Hawassa")
+          );
+        }
+      }
+
+      class App extends React.Component {
+        render() {
+          return React.createElement(
+            "div",
+            null,
+            React.createElement("h1", null, "Catalog"),
+            React.createElement(ProductsList),
+            React.createElement("h1", null, "Shops"),
+            React.createElement(ShopsList)
+          );
+        }
+      }
+
+      const app = React.createElement(App);
+      const root = createRoot(document.getElementById("root"));
+      root.render(app);
+    </script>
+  </body>
+</html>
