@@ -1,1 +1,71 @@
 <!-- Components with a more ambitious UI -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creating Functional Components Example 2</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react",
+          "react-dom/client": "https://esm.sh/react-dom/client"
+        }
+      }
+    </script>
+
+    <script type="module">
+      import React from "react";
+      import { createRoot } from "react-dom/client";
+
+      function ProductsList() {
+        return React.createElement(
+          "ul",
+          null,
+          React.createElement("li", null, "Holy Bible Amharic"),
+          React.createElement(
+            "li",
+            null,
+            "Holy Bible New Interational Version"
+          ),
+          React.createElement("li", null, "Nissan Navara"),
+          React.createElement("li", null, "Golf Club"),
+          React.createElement("li", null, "Tennis Racket")
+        );
+      }
+
+      function ShopsList() {
+        return React.createElement(
+          "ul",
+          null,
+          React.createElement("li", null, "Arsi Huruta"),
+          React.createElement("li", null, "Addis Ababa"),
+          React.createElement("li", null, "Bishoftu"),
+          React.createElement("li", null, "Dangela"),
+          React.createElement("li", null, "Axum")
+        );
+      }
+
+      function App() {
+        return React.createElement(
+          "div",
+          null,
+          React.createElement("h1", null, "Catalog"),
+          React.createElement(ProductsList),
+          React.createElement("h1", null, "Shops"),
+          React.createElement(ShopsList)
+        );
+      }
+
+      const app = React.createElement(App);
+
+      const root = createRoot(document.getElementById("root"));
+      root.render(app);
+    </script>
+  </body>
+</html>

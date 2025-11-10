@@ -1,1 +1,49 @@
 <!-- Components with a simple UI-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functional Components Example 1</title>
+</head>
+<body>
+    
+    <div id="root"></div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "react": "https://esm.sh/react",
+                "react-dom/client": "https://esm.sh/react-dom/client"
+            }
+        }
+    </script>
+
+    <script type="module">
+        import React from "react";
+        import { createRoot } from "react-dom/client";
+
+        function ProductsList() {
+            return React.createElement('p', null, "Products data list");
+        };
+
+        function ShopsList() {
+            return React.createElement("p", null, "Shops data list");
+        };
+
+        function App() {
+            return React.createElement("div", null,
+                React.createElement("h1", null, "Catalog"),
+                React.createElement(ProductsList),
+                React.createElement("h1", null, "Shops"),
+                React.createElement(ShopsList)
+            );
+        };
+
+        const app = React.createElement(App);
+        const root = createRoot(document.getElementById("root"));
+        root.render(app);
+    </script>
+</body>
+</html>
