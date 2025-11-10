@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>My Library</title>
-    <link href="style.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
 
@@ -18,44 +18,44 @@
 </script>
 
 <script type="module">
-    import React from "react"
-    import { createRoot } from "react-dom/client"
+    import React from "react";
+    import { createRoot } from "react-dom/client";
     
     class Book {
         constructor(title, author) {
-            this.title = title
-            this.author = author
-        }
+            this.title = title;
+            this.author = author;
+        };
 
         toString() {
-            return `${this.title}, by ${this.author}`
-        }
-    }
+            return `${this.title}, by ${this.author}`;
+        };
+    };
 
     class Film {
         constructor(name, genre, blurb) {
-            this.name = name
-            this.genre = genre
-            this.blurb = blurb
-        }
+            this.name = name;
+            this.genre = genre;
+            this.blurb = blurb;
+        };
 
         toString() {
-            return `${this.name} [${this.genre}], ${this.blurb}`
-        }
-    }
+            return `${this.name} [${this.genre}], ${this.blurb}`;
+        };
+    };
 
     const books = [
-        new Book('Millennium', 'Stieg Larsson'),
-        new Book('A Christmas Carol', 'Charles Dickens'),
-        new Book('The Son', 'Jo Nesbo'),
-    ]
+        new Book('Holy Bible', 'Holy Spirit'),
+        new Book('Never Give Up', 'Joyce Meyer'),
+        new Book('ዙበይዳ', 'Alex Abrham'),
+    ];
 
     const films = [
-        new Film('Airplane', 'Comedy', 'Classic plane spoof'),
-        new Film('Skyfall', 'Adventure', 'Bond spy yarn'),
-        new Film('Love Actually', 'RomCom', ' Hugh Grant playing Hugh Grant'),
+        new Film('The passion of the Christ', 'Christian',  'The life of Jesus Christ the Messiah'),
+        new Film('17 Again!', 'School Life', 'A journey of a girl in her teenage years'),
+        new Film('Fast and Furios', 'Adventur', ' The gang is fast and furious'),
         new Film('Mission Impossible', 'Adventure', ' Hi-octane stunt fest')
-    ]
+    ];
     
     class ItemsList extends React.Component {
         render() {
@@ -65,8 +65,8 @@
                 null,
                 this.props.items.map((item, i) => React.createElement("li", {key: i}, item.toString()))
             )
-        }
-    }
+        };
+    };
 
     class Table extends React.Component {
         render() {
@@ -76,24 +76,24 @@
                     React.createElement(TableBody, {objects: this.props.items})
                 )
             )
-        }
-    }
+        };
+    };
     
     class TableHead extends React.Component {
         render() {
             return React.createElement("thead", null,
                 React.createElement(TableRow, {data: Object.keys(this.props.sampleObject), head: true})
             )
-        }
-    }
+        };
+    };
 
     class TableBody extends React.Component {
         render() {
             return React.createElement("tbody", null,
                 this.props.objects.map((obj, i) => React.createElement(TableRow, {key: i, data: Object.values(obj), head: false}))
             )
-        }
-    }
+        };
+    };
 
     class TableRow extends React.Component {
         render() {
@@ -101,8 +101,8 @@
             return React.createElement("tr", null,
                 this.props.data.map((d, i) => React.createElement(elem, {key: i}, d))
             )
-        }
-    }
+        };
+    };
 
     const library = React.createElement('div', null,
         React.createElement('h1', null, 'My Library'),
@@ -114,10 +114,10 @@
         React.createElement(Table, {items: books}, null),
         React.createElement('h2', null, 'Films table'),
         React.createElement(Table, {items: films}, null),
-    )
+    );
     
-    const root = createRoot(document.getElementById('root'))
-    root.render(library)
+    const root = createRoot(document.getElementById('root'));
+    root.render(library);
 
 </script>
 
