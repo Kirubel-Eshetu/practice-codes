@@ -1,1 +1,68 @@
 <!-- Components that recieve properties -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Functional Components Example 3</title>
+</head>
+<body>
+    
+    <div id="root"></div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "react": "https://esm.sh/react",
+                "react-dom/client": "https://esm.sh/react-dom/client"
+            }
+        }
+    </script>
+
+    <script type="module">
+        import React from "react";
+        import { createRoot } from "react-dom/client";
+
+        const products = [
+            "Holy Bible Amharic",
+            "Holy Bible NIV",
+            "Nissan Navara",
+            "Golf Club",
+            "Tennis Racket"
+        ];
+
+        const shops = [
+            "Aris Huruta",
+            "Addis Ababa",
+            "Jimma",
+            "Gonder",
+            "Bahir Dar"
+        ];
+
+        function ItemsList(props) {
+            return React.createElement(
+                "ul",
+                null,
+                props.items.map((item, i) => React.createElement("li", {key: i}, item))
+            );
+        };
+
+
+        function App() {
+            return React.createElement("div", null,
+                React.createElement("h1", null, "Items List"),
+                React.createElement(ItemsList, {items: products}),
+                React.createElement("h1", null, "Shops"),
+                React.createElement(ItemsList, {items: shops})
+            );
+        };
+
+        const app = React.createElement(App);
+
+        const root = createRoot(document.getElementById("root"));
+        root.render(app);
+
+    </script>
+</body>
+</html>
