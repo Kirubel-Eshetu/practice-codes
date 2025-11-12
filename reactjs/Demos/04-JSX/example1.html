@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSX Example 1</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.js"></script>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "react": "https://esm.sh/react"
+                "react-dom/client": "https://esm.sh/react-dom/client"
+            }
+        }
+    </script>
+
+    <script data-type="module" type="text/babel">
+        import React from "react";
+        import { createRoot } from "react-dom/client";
+
+        function ItemsList() {
+            return (
+                <div>
+                    <h1>Items List with JSX</h1>
+                    <ul>
+                        <li>Holy Bible New International Version</li>
+                        <li>Box Guitar</li>
+                        <li>Bicycle</li>
+                    </ul>
+                </div>
+            );
+        };
+
+        const root = createRoot(document.getElementById('root'));
+        root.render(<ItemsList />)
+    </script>
+</body>
+
+</html>
