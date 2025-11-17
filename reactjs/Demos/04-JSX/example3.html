@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items List with JSX 3</title>
+    <style>
+        body {
+            font-family: "Segoe UI", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="root"></div>
+
+    <script src = "https://unpkg.com/@babel/standalone/babel.js"></script>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "react": "https://esm.sh/react",
+                "react-dom/client": "https://esm.sh/react-dom/client"
+            }
+        }
+    </script>
+
+    <script data-type="module" type="text/babel">
+        import React from "react";
+        import { createRoot } from "react-dom/client";
+
+        const data = ["Holy Bible Amharic NIV", "Mercedes Benz", "MacBook Pro"];
+
+        function ItemsList() {
+            const timeStamp = new Date().toLocaleTimeString();
+            return (
+                <div>
+                    <h1>Items List with JSX 3</h1>
+                    <ul>
+                    {
+                        data.map((item, i) => <li key={i}>{item}</li>)
+                    }
+                        </ul>   
+                        <hr />
+                        <small>Page generated at {timeStamp}</small> 
+                </div>
+            );
+        };
+
+        const root = createRoot(document.getElementById("root"));
+        root.render(<ItemsList/>);
+    </script>
+    
+</body>
+</html>
