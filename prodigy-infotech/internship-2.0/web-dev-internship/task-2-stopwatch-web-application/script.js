@@ -3,6 +3,10 @@ let elapsedTime = 0;
 let rafId = null;
 let isRunning = false;
 let lapCount = 0;
+const startBtn = document.querySelector(".startBtn");
+const pauseBtn = document.querySelector(".pauseBtn");
+const lapDisplay = document.querySelector(".lapDisplay");
+
 
 function formatTime(milliseconds) {
   const totalSeconds = Math.floor(milliseconds / 1000);
@@ -39,20 +43,33 @@ function tick() {
   rafId = requestAnimationFrame(tick);
 }
 
-document.querySelector(".startBtn").onclick = function () {
+function startTimer() {
   if (!isRunning) {
     const now = Date.now();
     startTime = now - elapsedTime;
     isRunning = true;
     rafId = requestAnimationFrame(tick);
+    pauseBtn.textContent = "Pause";
   }
-};
+}
 
-document.querySelector(".pauseBtn").onclick = function () {
+function pauseTimer() {
   if (isRunning) {
     cancelAnimationFrame(rafId);
     isRunning = false;
+    pauseBtn.textContent = "Resume";
+    startBtn.style.display = "none";
+  } else {
+    startTimer();
   }
+}
+
+document.querySelector(".startBtn").onclick = function () {
+  startTimer();
+};
+
+document.querySelector(".pauseBtn").onclick = function () {
+  pauseTimer();
 };
 
 document.querySelector(".resetBtn").onclick = function () {
@@ -62,8 +79,9 @@ document.querySelector(".resetBtn").onclick = function () {
   startTime = 0;
   lapCount = 0;
   document.querySelector(".minutes").textContent = "00:00.00";
+  startBtn.style.display = "inline";
+  pauseBtn.textContent = "Pause";
 
-  const lapDisplay = document.querySelector(".lapDisplay");
   lapDisplay.style.display = "none";
   lapDisplay.innerHTML = "";
 };
@@ -72,7 +90,6 @@ document.querySelector(".lapBtn").onclick = function () {
   if (isRunning) {
     lapCount++;
 
-    const lapDisplay = document.querySelector(".lapDisplay");
     lapDisplay.style.display = "block";
 
     const lapEntry = document.createElement("div");
@@ -84,17 +101,21 @@ document.querySelector(".lapBtn").onclick = function () {
   }
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.operations button, .lapContainer button').forEach((btn) => {
-    btn.textContent = btn.textContent.toLowerCase().replace(/\b\w/g, (c) => c.toUpperCase());
-  });
+document.addEventListener("DOMContentLoaded", () => {
+  document
+    .querySelectorAll(".operations button, .lapContainer button")
+    .forEach((btn) => {
+      btn.textContent = btn.textContent
+        .toLowerCase()
+        .replace(/\b\w/g, (c) => c.toUpperCase());
+    });
 });
 
 function yearDisplay() {
   const date = new Date();
   const year = date.getFullYear();
   return year;
-};
+}
 
 const year = yearDisplay();
 document.querySelector(".yearDisplay").textContent = `${year}`;

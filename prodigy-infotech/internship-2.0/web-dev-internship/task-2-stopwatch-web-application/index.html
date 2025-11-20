@@ -1,40 +1,46 @@
 <!-- Stopwatch web Application here we go -->
- 
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stopwatch</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Project Title Container-->
-    <div class="projTitle"><h1>Stopwatch⌛</h1></div>
 
-    <!-- Stopwatch Container -->
-    <div class="stopwatchContainer">
-      <div class="minutes">00:00.00</div>
-      <div class="buttons">
-        <div class="operations">
-          <button class="startBtn">start</button>
-          <button class="pauseBtn">pause</button>
-          <button class="resetBtn">reset</button>
-        </div>
-        <div class="lapContainer">
-          <button class="lapBtn">lap</button>
-          <div class="lapDisplay">
-            <!-- Laps will be displayed here with JS -->
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stopwatch</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="./assets/stopwatch-icon.ico">
+</head>
+
+<body>
+  <!-- Project Title Container-->
+  <div class="projTitle">
+    <h1>Stopwatch⌛</h1>
+  </div>
+
+  <!-- Stopwatch Container -->
+  <div class="stopwatchContainer">
+    <div class="minutes">00:00.00</div>
+    <div class="buttons">
+      <div class="operations">
+        <button class="startBtn">start</button>
+        <button class="pauseBtn">pause</button>
+        <button class="resetBtn">reset</button>
+      </div>
+      <div class="lapContainer">
+        <button class="lapBtn">lap</button>
+        <div class="lapDisplay">
+          <!-- Laps will be displayed here with JS -->
         </div>
       </div>
     </div>
+  </div>
 
-    <footer>
-      Made by Kirubel. <br />
-      <div class="yearDisplay"></div>
-    </footer>
+  <footer>
+    Made by Kirubel. <br />
+    <div class="yearDisplay"></div>
+  </footer>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
+
 </html>
