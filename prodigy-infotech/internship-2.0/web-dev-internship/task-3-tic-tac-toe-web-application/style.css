@@ -1,7 +1,9 @@
 .container {
-    
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    aspect-ratio: 1/1;
+    gap: 0.5rem;
+    margin:auto;
     border: 2px solid black;
     width: fit-content;
 }
