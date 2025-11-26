@@ -1,11 +1,13 @@
-class Solution:
-    def smallerNumbersThanCurrent(self, nums: list[int]) -> list[int]:
+from typing import List
 
-        sorted_nums = sorted(nums)
+class Solution:
+    def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
+
+        sortedNums = sorted(nums)
         
-        first_index = {}
-        for i, num in enumerate(sorted_nums):
-            if num not in first_index:
-                first_index[num] = i
+        firstIndex = {}
+        for i, num in enumerate(sortedNums):
+            if num not in firstIndex:
+                firstIndex[num] = i
         
-        return [first_index[num] for num in nums]
+        return [firstIndex[num] for num in nums]
