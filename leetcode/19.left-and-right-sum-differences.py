@@ -1,5 +1,7 @@
+from typing import List
+
 class Solution:
-    def leftRightDifference(self, nums: list[int]) -> list[int]:
+    def leftRightDifference(self, nums: List[int]) -> List[int]:
         total_sum = sum(nums)
         left_sum = 0
         result = []

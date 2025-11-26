@@ -1,6 +1,7 @@
+from typing import List
 
 class Solution:
-    def finalValueAfterOperations(self, operations: list[str]) -> int:
+    def finalValueAfterOperations(self, operations: List[str]) -> int:
         X=0
         for op in operations:
             if op == "++X" or op == "X++":

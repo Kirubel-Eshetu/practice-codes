@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
-    def reverseString(self, s: list[str]) -> None:
+    def reverseString(self, s: List[str]) -> None:
         s.reverse()

@@ -1,5 +1,7 @@
+from typing import List
+
 class Solution:
-    def arithmeticTriplets(self, nums: list[int], diff: int) -> int:
+    def arithmeticTriplets(self, nums: List[int], diff: int) -> int:
         count = 0
         n = len(nums)
         for i in range(n):
