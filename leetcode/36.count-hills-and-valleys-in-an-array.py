@@ -4,7 +4,7 @@ class Solution:
     def countHillValley(self, nums: List[int]) -> int:
         arr = [nums[0]]
         for n in nums[1:]:
-            if n != arr[-1]:
+            if n != arr[i]:
                 arr.append(n)
 
         count = 0
