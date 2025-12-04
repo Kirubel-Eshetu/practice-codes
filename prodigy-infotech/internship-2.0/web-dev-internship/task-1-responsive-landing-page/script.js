@@ -1,0 +1,1 @@
+console.log("Expect a responsive landing page soon!");

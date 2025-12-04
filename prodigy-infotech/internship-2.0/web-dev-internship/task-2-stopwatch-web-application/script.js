@@ -1,3 +1,5 @@
+console.log("Stopwatch-web-application done!")
+
 let startTime = 0;
 let elapsedTime = 0;
 let rafId = null;

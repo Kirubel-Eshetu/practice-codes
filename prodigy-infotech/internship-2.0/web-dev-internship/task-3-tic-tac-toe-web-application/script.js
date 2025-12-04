@@ -1,0 +1,1 @@
+console.log("Tic Tac Toe web application is on the way!");
