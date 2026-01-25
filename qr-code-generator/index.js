@@ -6,7 +6,7 @@ import fs from 'fs';
 
 inquirer
   .prompt([{
-    message: "Please enter a valid URL to generate a QR code: ",
+    message: "Please enter a URL to generate a QR code: ",
     name: "URL",
   }, 
   ])
