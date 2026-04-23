@@ -11,11 +11,12 @@ header {
 #navbar {
     background-color: #4060fd;
     color: white;
+    padding: 15px 20px;
+    
 }
 
 #navbar .container {
     display: flex;
-    padding: 15px 20px;
 }
 
 #navbar .logo {
@@ -53,13 +54,11 @@ header {
 }
 
 .content-section {
-    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
+    padding: 2rem 0rem;
 }
 
 .content-section p {
@@ -69,22 +68,47 @@ header {
 
 #home {
     background-color: #ffffff;
+    padding-top: 5rem;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+#home .article-image {
+    width: 25em;
+    height: 20em;
 }
 
 #ministry {
     background-color: #dedddd;
 }
 
+#ministry .Jesus-preach {
+    width: 25em;
+    height: 20em;
+}
+
 #miracles {
     background-color: #b8b8b8;
+}
+
+#miracles .Jesusrose{
+    width: 25em;
+    height: 20em;
 }
 
 #verses {
     background-color: #a7a7a7;
 }
 
+#verses .holyBible {
+    width: 25em;
+    height: 20em;
+}
+
 footer{
-    background-color: black;
+    background-color: #2b2b2b;
     color: white;
     text-align: center;
     padding: 10px 0;
