@@ -5,7 +5,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     min-height: 100vh;
-    background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url('assets/time-glass.jpg');
+    background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url('public/time-glass.jpg');
 }
 
 .projTitle {
@@ -81,7 +81,6 @@ footer {
     color: white;
     width: 100%;
     text-align: center;
-    padding: 1.5rem;
     box-sizing: border-box;
     font-size: 1.2rem;
     font-weight: bold;
